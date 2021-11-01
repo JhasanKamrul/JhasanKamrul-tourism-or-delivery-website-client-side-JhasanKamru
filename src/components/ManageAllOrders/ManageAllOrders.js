@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ManageAllOrders = () => {
     const [allOrder, setAllOrder] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/manage-all-orders`)
+        fetch(`https://polar-cliffs-18416.herokuapp.com/manage-all-orders`)
             .then(res => res.json())
             .then(data => {
                 setAllOrder(data);;
@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are You Sure You want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/manage-all-orders/${id}`;
+            const url = `https://polar-cliffs-18416.herokuapp.com/manage-all-orders/${id}`;
             fetch(url, {
                 method: "DELETE",
                 headers: {

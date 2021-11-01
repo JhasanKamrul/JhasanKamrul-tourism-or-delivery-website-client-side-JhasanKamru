@@ -6,7 +6,7 @@ const MyOrder = () => {
     const { userEmail } = useParams();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/myorders/${userEmail}`)
+        fetch(`https://polar-cliffs-18416.herokuapp.com/myorders/${userEmail}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data);

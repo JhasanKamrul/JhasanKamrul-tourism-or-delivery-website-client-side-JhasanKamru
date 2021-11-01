@@ -4,7 +4,7 @@ import SingleService from '../SingleService/SingleService';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://polar-cliffs-18416.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)

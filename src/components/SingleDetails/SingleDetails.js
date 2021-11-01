@@ -18,14 +18,14 @@ const SingleDetails = () => {
         }
     });
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://polar-cliffs-18416.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setBookRoom(data))
     }, []);
     const onSubmit = data => {
         data.productName = bookRoom.name;
         data.imgUrl = bookRoom.img;
-        fetch('http://localhost:5000/addServices', {
+        fetch('https://polar-cliffs-18416.herokuapp.com/addServices', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

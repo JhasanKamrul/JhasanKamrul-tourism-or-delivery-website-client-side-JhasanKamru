@@ -4,7 +4,7 @@ import './AddService.css';
 const AddService = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addingnewServices', {
+        fetch('https://polar-cliffs-18416.herokuapp.com/addingnewServices', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
