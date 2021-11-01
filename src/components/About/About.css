@@ -1,0 +1,18 @@
+.about{
+    display: flex;
+    width: 95%;
+    max-width: 1048px;
+    margin: 0 auto;
+    padding: 1.875rem 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.about img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about span{
+    color: rgb(38, 41, 135);
+}
